@@ -25,5 +25,5 @@ env_vpc               = "prod"
 # For Security Groups
 name_sg               = "sg_prod"
 name_sg_rds           = "sg_rds_prod"
-description_sg        = "Security Group"
-description_sg_rds    = "Security Group for RDS"
+description_sg        = "Security Group for http80/8088, https and ghost 2368"
+description_sg_rds    = "Security Group for RDS port 3306"
