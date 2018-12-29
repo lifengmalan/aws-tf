@@ -88,3 +88,43 @@ module "sg_rds" {
   egress_rules       = ["all-all"]
 }
 
+###########
+# MySQL DB
+###########
+module "db" {
+  source = "terraform-aws-modules/rds/aws"
+
+  identifier = "${var.id_rds}"
+
+  engine            = "${var.engine}"
+  engine_version    = "${var.version_rds}"
+  instance_class    = "${var.class_rds}"
+  allocated_storage = 20
+  storage_encrypted = false
+
+  name     = "${var.name_rds}"
+  username = "${var.user_rds}"
+  password = "${var.password_rds}"
+  port     = "${var.port_rds}"
+
+  #vpc_security_group_ids = ["${var.securitygroups}"]
+  vpc_security_group_ids = "${module.sg_rds.this_security_group_id}"
+
+  maintenance_window = "Mon:00:00-Mon:03:00"
+  backup_window      = "03:00-06:00"
+
+  multi_az = false
+  backup_retention_period = 0
+
+  # DB parameter group
+  family = "${var.family_rds}"
+
+  # DB option group
+  major_engine_version = "${var.major_rds}"
+
+  #subnet_ids = "${var.subnets}"
+  subnet_ids = ["${module.vpc.database_subnets}"]
+  deletion_protection = true
+
+}
+
