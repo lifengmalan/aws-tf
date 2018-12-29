@@ -45,3 +45,40 @@ output "this_security_group_name_RDS" {
   description = "List of Name of secutity group for rds"
   value       = "${module.sg_rds.this_security_group_name}"
 }
+
+# RDS
+output "this_db_instance_address" {
+  description = "The address of the RDS instance"
+  value       = "${module.db.this_db_instance_address}"
+}
+
+output "this_db_instance_arn" {
+  description = "The ARN of the RDS instance"
+  value       = "${module.db.this_db_instance_arn}"
+}
+
+output "this_db_instance_availability_zone" {
+  description = "The availability zone of the RDS instance"
+  value       = "${module.db.this_db_instance_availability_zone}"
+}
+
+output "this_db_instance_endpoint" {
+  description = "The connection endpoint"
+  value       = "${module.db.this_db_instance_endpoint}"
+}
+
+output "this_db_instance_status" {
+  description = "The RDS instance status"
+  value       = "${module.db.this_db_instance_status}"
+}
+
+output "this_db_instance_name" {
+  description = "The database name"
+  value       = "${module.db.this_db_instance_name}"
+}
+
+output "this_db_instance_username" {
+  description = "The master username for the database"
+  value       = "${module.db.this_db_instance_username}"
+}
+
