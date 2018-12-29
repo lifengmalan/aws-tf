@@ -14,6 +14,6 @@ public_subnet_1       = "170.0.101.0/24"
 public_subnet_2       = "170.0.102.0/24"
 public_subnet_3       = "170.0.103.0/24"
 
-name_vpc              = "PROD"
+name_vpc              = "vpc-prod"
 owner_vpc             = "lifeng68"
-env_vpc               = "PROD"
+env_vpc               = "prod"
