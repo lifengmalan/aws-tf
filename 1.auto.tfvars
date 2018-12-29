@@ -23,7 +23,7 @@ name_vpc              = "vpc-prod"
 env_vpc               = "prod"
 
 # For Security Groups
-name_sg               = "sg-prod"
-name_sg_rds           = "sg-rds-prod"
+name_sg               = "sg_prod"
+name_sg_rds           = "sg_rds_prod"
 description_sg        = "Security Group"
 description_sg_rds    = "Security Group for RDS"
