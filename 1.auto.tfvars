@@ -31,4 +31,3 @@ description_sg_rds    = "Security Group for RDS port 3306"
 # For RDS
 id_rds                = "mysqldb"
 name_rds              = "mysqldb"
-
