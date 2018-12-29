@@ -75,7 +75,7 @@ module "sg_rds" {
   source = "terraform-aws-modules/security-group/aws"
 
   name = "${var.name_sg_rds}"
-  description = "${var.description_rds}"
+  description = "${var.description_sg_rds}"
  
   vpc_id = "${module.vpc.vpc_id}"
 
