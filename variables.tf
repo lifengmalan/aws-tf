@@ -29,6 +29,7 @@ variable "env_vpc" {}
 variable "name_sg" {}
 variable "name_sg_rds" {}
 variable "description_sg" {}
+variable "description_sg_rds" {}
 
 variable "full_cidr" { default = "0.0.0.0/0" }
 variable "in_rules" { default = ["http-80-tcp", "https-443-tcp", "ssh-tcp"] }
