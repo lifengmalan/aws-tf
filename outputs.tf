@@ -26,4 +26,22 @@ output "database_subnets" {
   value       = ["${module.vpc.database_subnets}"]
 }
 
+# Security Groups
 
+output "this_security_group_id" {
+  description = "List of IDs of secutity group"
+  value       = "${module.sg_prod.this_security_group_id}"
+}
+output "this_security_group_name" {
+  description = "List of Name of secutity group"
+  value       = "${module.sg_prod.this_security_group_name}"
+}
+
+output "this_security_group_RDS_id" {
+  description = "List of IDs of secutity group for rds"
+  value       = "${module.sg_rds.this_security_group_id}"
+}
+output "this_security_group_name_RDS" {
+  description = "List of Name of secutity group for rds"
+  value       = "${module.sg_rds.this_security_group_name}"
+}
