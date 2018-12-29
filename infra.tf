@@ -32,6 +32,7 @@ module "vpc" {
   vpc_tags = {
     Name = "${var.name_vpc}"
   }
+}
 
 # Security Groups
 module "sg_prod" {
@@ -87,4 +88,3 @@ module "sg_rds" {
   egress_rules       = ["all-all"]
 }
 
-}
