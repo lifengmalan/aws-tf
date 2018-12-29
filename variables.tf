@@ -44,4 +44,4 @@ variable "class_rds" {}
 variable "name_rds" {}
 variable "user_rds" {}
 variable "password_rds" {}
-variable "port" { default = "3306" }
+variable "port_rds" { default = "3306" }
