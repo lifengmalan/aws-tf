@@ -35,6 +35,7 @@ variable "full_cidr" { default = "0.0.0.0/0" }
 variable "in_rules" { default = ["http-80-tcp", "https-443-tcp", "ssh-tcp"] }
 
 # For RDS
+variable "engine" { default = "mysql" }
 variable "id_rds" {}
 variable "version_rds" { default = "5.6.41" }
 variable "family_rds" { default = "mysql5.6" }
