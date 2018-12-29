@@ -14,6 +14,8 @@ module "vpc" {
   azs             = ["${var.az_1}", "${var.az_2}", "${var.az_3}"]
   private_subnets = ["${var.private_subnet_1}", "${var.private_subnet_2}", "${var.private_subnet_3}"]
   public_subnets  = ["${var.public_subnet_1}", "${var.public_subnet_2}", "${var.public_subnet_3}"]
+  database_subnets = ["${var.private_subnet_1}", "${var.private_subnet_2}", "${var.private_subnet_3}"]
+  
 
   assign_generated_ipv6_cidr_block = true
   enable_dns_hostnames = true
@@ -22,12 +24,7 @@ module "vpc" {
   single_nat_gateway = false
 
   tags = {
-    Owner       = "${var.owner_vpc}"
+    Name = "${var.name_vpc}"
     Environment = "${var.env_vpc}"
   }
-
-  vpc_tags = {
-    Name = "${var.name_vpc}"
-  }
 }
-
