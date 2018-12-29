@@ -11,7 +11,7 @@ module "vpc" {
 
   cidr = "${var.cidr}"
 
-  azs             = ["${var.subnet_1}", "${var.subnet_2}", "${var.subnet_3}"]
+  azs             = ["${var.az_1}", "${var.az_2}", "${var.az_3}"]
   private_subnets = ["${var.private_subnet_1}", "${var.private_subnet_2}", "${var.private_subnet_3}"]
   public_subnets  = ["${var.public_subnet_1}", "${var.public_subnet_2}", "${var.public_subnet_3}"]
 
