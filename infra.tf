@@ -48,24 +48,6 @@ module "sg_prod" {
   ingress_cidr_blocks = ["${var.full_cidr}"]
   ingress_rules       = "${var.in_rules}"
 
-
-  ingress_with_cidr_blocks = [
-    {
-      from_port        = 2368
-      to_port          = 2368
-      protocol         = "tcp"
-      description      = "for ghost"
-      cidr_blocks = "${var.full_cidr}"
-    },
-    {
-      from_port        = 8080
-      to_port          = 8080
-      protocol         = "tcp"
-      description      = "http8080 for dolibar and opencart"
-      cidr_blocks = "${var.full_cidr}"
-    },
-  ]
-
   egress_cidr_blocks = ["0.0.0.0/0"]
   egress_rules       = ["all-all"]
 
