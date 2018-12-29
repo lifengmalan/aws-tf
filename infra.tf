@@ -23,8 +23,9 @@ module "vpc" {
   enable_nat_gateway = false
   single_nat_gateway = false
 
-  tags = {
+  vpc_tags = {
     Name = "${var.name_vpc}"
     Environment = "${var.env_vpc}"
   }
+
 }
