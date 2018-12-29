@@ -31,3 +31,8 @@ description_sg_rds    = "Security Group for RDS port 3306"
 # For RDS
 id_rds                = "mysqldb"
 name_rds              = "mysqldb"
+class_rds             = "db.t2.micro"
+version_rds           = "5.6.41"
+family_rds            = "mysql5.6"
+major_rds             = "5.6"
+user_rds              = "root"
