@@ -17,6 +17,9 @@ variable "public_subnet_1" {}
 variable "public_subnet_2" {}
 variable "public_subnet_3" {}
 
+variable "database_subnet_1" {}
+variable "database_subnet_2" {}
+variable "database_subnet_3" {}
+
 variable "name_vpc" {}
-variable "owner_vpc" {}
 variable "env_vpc" {}
