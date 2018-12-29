@@ -23,7 +23,7 @@ module "vpc" {
   enable_nat_gateway = false
   single_nat_gateway = false
 
-  tag = {
+  tags = {
     Environment = "${var.env_vpc}"
     TerraForm = "True"
   }
