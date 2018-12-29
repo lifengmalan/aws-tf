@@ -114,7 +114,7 @@ module "db" {
   backup_window      = "03:00-06:00"
 
   multi_az = false
-  backup_retention_period = 0
+  backup_retention_period = 2
 
   # DB parameter group
   family = "${var.family_rds}"
