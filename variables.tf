@@ -37,11 +37,11 @@ variable "in_rules" { default = ["http-80-tcp", "https-443-tcp", "ssh-tcp"] }
 # For RDS
 variable "engine" { default = "mysql" }
 variable "id_rds" {}
-variable "version_rds" { default = "5.6.41" }
-variable "family_rds" { default = "mysql5.6" }
-variable "major_rds" { default = "5.6" }
-variable "class_rds" { default = "db.t2.micro" }
+variable "version_rds" {}
+variable "family_rds" {}
+variable "major_rds" {}
+variable "class_rds" {}
 variable "name_rds" {}
-variable "user_rds" { default = "root" }
+variable "user_rds" {}
 variable "password_rds" {}
 variable "port" { default = "3306" }
