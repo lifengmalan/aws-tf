@@ -19,9 +19,10 @@ database_subnet_1     = "170.0.201.0/24"
 database_subnet_2     = "170.0.202.0/24"
 database_subnet_3     = "170.0.203.0/24"
 
-# For Security Groups
 name_vpc              = "vpc-prod"
 env_vpc               = "prod"
+
+# For Security Groups
 name_sg               = "sg-prod"
 name_sg_rds           = "sg-rds-prod"
 description_sg        = "Security Group"
