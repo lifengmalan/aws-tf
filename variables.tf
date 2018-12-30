@@ -45,3 +45,9 @@ variable "name_rds" {}
 variable "user_rds" {}
 variable "password_rds" {}
 variable "port_rds" { default = "3306" }
+
+# For EC2
+variable "name_ec2" {}
+variable "ami" {}
+variable "type_ec2" {}
+variable "key_ec2" { default = "w3" }
