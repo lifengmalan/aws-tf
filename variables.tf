@@ -50,4 +50,4 @@ variable "port_rds" { default = "3306" }
 variable "name_ec2" {}
 variable "ami" {}
 variable "type_ec2" {}
-variable "key_ec2" { default = "w3" }
+variable "key_ec2" {}
