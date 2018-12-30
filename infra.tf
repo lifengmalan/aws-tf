@@ -89,7 +89,6 @@ module "db" {
   password = "${var.password_rds}"
   port     = "${var.port_rds}"
 
-  #vpc_security_group_ids = ["${var.securitygroups}"]
   vpc_security_group_ids = ["${module.sg_rds.this_security_group_id}"]
 
   maintenance_window = "Mon:00:00-Mon:03:00"
@@ -110,3 +109,28 @@ module "db" {
 
 }
 
+# EC2
+# resource "aws_eip" "this" {
+#   vpc      = true
+#   instance = "${module.ec2.id[0]}"
+# }
+
+module "ec2" {
+  source = "terraform-aws-modules/ec2-instance/aws"
+
+  instance_count = 1
+
+  name          = "${var.name_ec2}"
+  ami           = "${var.ami}"
+  instance_type = "${var.type_ec2}"
+  key_name      = "${var.key_ec2}"
+  subnet_id     = "${var.subnet_id}"
+  subnet_id     = "${element(module.vpc.public_subnets,0)}"
+  vpc_security_group_ids = ["${module.sg_prod.this_security_group_id}"]
+  associate_public_ip_address = true
+
+   tags = {
+    Terraform = "true"
+    Environment = "prod"
+   }
+}
