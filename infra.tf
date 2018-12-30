@@ -124,7 +124,6 @@ module "ec2" {
   ami           = "${var.ami}"
   instance_type = "${var.type_ec2}"
   key_name      = "${var.key_ec2}"
-  subnet_id     = "${var.subnet_id}"
   subnet_id     = "${element(module.vpc.public_subnets,0)}"
   vpc_security_group_ids = ["${module.sg_prod.this_security_group_id}"]
   associate_public_ip_address = true
@@ -132,5 +131,6 @@ module "ec2" {
    tags = {
     Terraform = "true"
     Environment = "prod"
+    Description = "Ubuntu-Web-Ghost-Opencart-Dolibarr"
    }
 }
