@@ -36,3 +36,10 @@ version_rds           = "5.6.41"
 family_rds            = "mysql5.6"
 major_rds             = "5.6"
 user_rds              = "root"
+
+# For EC2
+name_ec2              = "ubuntu-prod"
+ami                   = "ami-0c5199d385b432989"
+type_ec2              = "t2.micro"
+key_ec2               = "w3"
+
