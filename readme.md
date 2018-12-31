@@ -1,4 +1,5 @@
-This TerraForm template is to create AWS VPC, Security Groups, RDS and EC2 instance. Below items will be created.
+This TerraForm template is to create AWS VPC, Security Groups, RDS and EC2 instance under AWS free tier. 
+Below AWS resources will be created. All the resources are under AWS free tier.
 
 1. VPC with 3 public subnets, 3 private subnets and 3 DB subnets.
 
