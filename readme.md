@@ -17,7 +17,7 @@ Usage:
 
 2. clone the repo
 
-   git clone -b master --single-branch https://gitlab.com/lifeng68/tf.git
+   git clone -b master --single-branch https://github.com/lifengmalan/aws-tf
 
 3. update the variables and outputs in the below files if needed.
 
