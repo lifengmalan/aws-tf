@@ -28,6 +28,6 @@ Usage:
 
 4. terraform init
 
-5. terraform plan
+5. terraform plan -var-file=me.tfvars
 
-6. terraform apply
+6. terraform apply -var-file=me.tfvars
